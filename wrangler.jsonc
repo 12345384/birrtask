@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "birrtask",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-06",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/postback/*"]
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "birrtask-db",
+    "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+  }],
+  "vars": {
+    "APP_NAME": "BirrTask",
+    "DAILY_AD_LIMIT": "5",
+    "MIN_WITHDRAWAL_ETB": "100",
+    "REWARD_SHARE_BPS": "3000"
+  }
+}
